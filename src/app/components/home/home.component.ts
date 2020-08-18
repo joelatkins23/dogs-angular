@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   dogslist:any;
   name ='Dogs';
   img='';
+  selectedItem:any;
   constructor(private dogsService: DogapisService) { }
 
   ngOnInit(): void {
@@ -38,10 +39,11 @@ export class HomeComponent implements OnInit {
         console.log(error);
       });
   }
-  getimg(childname, name){
+  getimg(childname, name, item){
     this.dogsService.getimg(childname,name).subscribe((resp) => {
       this.img= resp['message']; 
       this.name=childname+' '+name;
+      this.selectedItem=item;
     }, error => {
       console.log(error);
     });

@@ -4,13 +4,13 @@
     </div>
     <div class="sidebar">
         <ul class="nav flex-column">
-            <li class="nav-item" *ngFor="let item of dogslist">
-                <a class="nav-link " href="#" (click)="getimg(item.childname, item.name)">{{item.childname}} {{item.name}}</a>
+            <li class="nav-item" *ngFor="let item of dogslist" (click)="getimg(item.childname, item.name, item)" [ngClass]="{'active': selectedItem == item}">
+                <a class="nav-link " href="#"> {{item.name}} {{item.childname}}</a>
             </li>
         </ul>
     </div>
-    <div class="content mt-5">
-        <div class="container text-center mt-5">
+    <div class="content ">
+        <div class="text-center">
             <div class="img-content">
                 <img class="image-rsponisve" src='{{img}}' alt="" />
             </div>
