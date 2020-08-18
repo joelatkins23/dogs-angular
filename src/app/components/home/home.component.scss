@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+.sidebar {
+    margin-top: 50px;
+    width: 200px;
+    background: #eee;
+    min-height: calc(100vh - 50px);
+    float: left;
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.header {
+    background: red;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-item {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-item a {
+    color: #000;
+}
+
+.content {
+    width: calc(100% - 200px);
+    float: left;
+}
+
+.img-content img {
+    width: 500px;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.active {
+    color: red;
+}
+
+.header h2 {
+    margin-left: 10px;
+    color: white;
+    padding-top: 4px;
+    text-transform: uppercase;
+}
